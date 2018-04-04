@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+# Python REST API
+## Building a REST API
+When you decide that you need a rest api, there are a lot of (tough) choices you have to make.
+First you have to settle on the definitions and concepts of a rest api. There are a number of great starting
+points, like the excellent [rest api tutorial](http://www.restapitutorial.com/) by Todd Fredrich
+and [numerous others](https://www.google.com/search?q=rest+api+tutorial).
+When you have wrapped your head around the concepts of REST and decided it will give you 
+[all kinds of advantages](https://www.google.nl/search?q=rest+api+advantages), now comes the time to put
+it all into practice.  
+  Then come all kinds of next questions, like: which language to use, which web framework, which database,
+how to organize your code, how to separate data storage and business logic, how to organize code for flexibility,
+how to fill in all the required and optional functionality for REST interfaces, how to implement security, how to
+select a hosting provider etc etc.  
+  [We](https://yourapi.io) went through all these questions ourselves also when developing a very large and ambitious
+application and we had numerous discussions about all these choices and settled for a solution which is beneficial
+for all other Python developers out there. We not only built a flexible framework with dynamic code execution, but 
+also solved all the challenges in providing a reliable and scalable hosted solution.  
+  We hope we can help you solve your tough problems by providing our Python based REST API. In this public repo
+we give a walkthrough of some samples which hopefully inspire you to build your own awesome API on the yourapi platform!
 
-You can use the [editor on GitHub](https://github.com/yourapi/python.rest.api/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yourapi/python.rest.api/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Design philosophy
