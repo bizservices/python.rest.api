@@ -22,5 +22,16 @@ we give a walkthrough of some samples which hopefully inspire you to build your 
 We wanted to build a system where you can easily specify a rest api, using a standard method. The system itself 
 consists of three layers: a web server (no assumptions on which server), the core yourapi services and data storage 
 (again, no assumptions).  
-  Currently, we use [Flask](http://flask.pocoo.org) as our web server. [As you can see](../providers/Flask/main.py), 
-we put as little code in the Flask server as possible. Processing goes to our core services as quickly as possible.
+  Currently, we use [Flask](http://flask.pocoo.org) as our web server. [As you can see](https://github.com/yourapi/python.rest.api/blob/master/providers/Flask/main.py), 
+we put as little code in the Flask server as possible. Processing goes to our core services as quickly as possible.  
+  For our database we currently use PostgreSQL, our favorite SQL database. Here we also made as little processing as 
+possible, so the main services will remain unchanged when switching to a new database. In fact, we will be migrating
+from Postgres to a massively scalable database (probably [Cloud spanner](https://cloud.google.com/spanner/))
+in the near future.  
+  For the database storage we designed a hybrid structured document/graph/SQL schema which can accommodate any 
+structure and relationships without schema changes, so which is perfectly suited for the future.  
+  Finally we wanted to add custom code in a structured way, so the behavior of any resource can be adapted in the 
+same way. For that we chose to define **code hooks** before and after data access. These code hooks correspond to
+similarly named methods in the classes which correspond to the resource names:
+
+![Architecture overview](https://github.com/yourapi/python.rest.api/blob/master/pics/framework-diagram.svg?sanitize=true)
