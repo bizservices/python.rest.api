@@ -19,3 +19,8 @@ also solved all the challenges in providing a reliable and scalable hosted solut
 we give a walkthrough of some samples which hopefully inspire you to build your own awesome API on the yourapi platform!
 
 ## Design philosophy
+We wanted to build a system where you can easily specify a rest api, using a standard method. The system itself 
+consists of three layers: a web server (no assumptions on which server), the core yourapi services and data storage 
+(again, no assumptions).  
+  Currently, we use [Flask](http://flask.pocoo.org) as our web server. [As you can see](../providers/Flask/main.py), 
+we put as little code in the Flask server as possible. Processing goes to our core services as quickly as possible.
